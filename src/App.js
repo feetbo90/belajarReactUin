@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState}  from 'react';
 import './App.css';
+import NamaAlamat from './Input/NamaAlamat';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [nama, setNama]= useState("");
+    const [alamat, setAlamat] = useState("");
+    const rubahNama = (event) => {
+        setNama(event.target.value);
+    }
+    const rubahAlamat = (event) => {
+        setAlamat(event.target.value);
+    }
+
+    console.log(nama)
+    return (
+        <div className="App">
+            <p>Hello World</p>
+
+            <p> Masukkan Nama : </p>
+            <input type="text"
+                onChange={rubahNama}>
+            </input>
+            <p> Masukkan ALamat : </p>
+            <input type="text"
+                onChange={rubahAlamat}>
+            </input>
+            <NamaAlamat nama ={nama} alamat={alamat}/>
+        </div>
+    );
+
 }
 
 export default App;
