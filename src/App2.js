@@ -3,13 +3,13 @@ import './App.css';
 import InputNamaDanAlamat from './Input/InputNamaDanAlamat'
 
 
-function App() {
+function App3() {
 
   // nama merupakan nilai
   // setNama merupakan pengesetan nilai
   const [nama, setNama] = useState("Iqbal");
   const [alamat, setAlamat] = useState("Medan");
-  
+
 
   // fungsi untuk mengambil nilai yang berubah
 
@@ -26,16 +26,16 @@ function App() {
   return (
     <div className="App">
       <p>My First Application</p>
-      
+
       <p>Ini dari file InputNamaDanAlamat.js</p>
-      <InputNamaDanAlamat 
+      <InputNamaDanAlamat
         namaLengkap={nama}
         alamatLengkap = {alamat}
       />
 
       <p>Masukkan Nama : </p>
-      
-        <input 
+
+        <input
           type="text"
           onChange={perubahanNilaiNama}
         >
@@ -44,10 +44,10 @@ function App() {
         <input type="text"
           onChange={perubahanAlamat} >
         </input>
-        <p>Ini dari App.js</p>
+        <p>Ini dari App3.js</p>
         <p>Nama : {nama}</p>
         <p>Alamat : {alamat}</p>
-      
+
     </div>
   );
 }
