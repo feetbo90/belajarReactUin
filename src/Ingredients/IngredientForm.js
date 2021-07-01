@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import './IngredientForm.css';
+import Card from '../UI/Card';
 
 const IngredientForm = () => {
 // axios
@@ -20,9 +22,10 @@ const IngredientForm = () => {
     })
     console.log(inputState)
     return (
-        <div>
+        <section className="ingredient-form">
+            <Card>
             <form onSubmit={submitHandler}>
-                <div>
+                <div className="form-control">
                     <label htmlFor={"title"}>Nama :</label>
                     <input
                         type="text"
@@ -39,7 +42,7 @@ const IngredientForm = () => {
                         }
                     />
                 </div>
-                <div>
+                <div className="form-control">
                     <label htmlFor={"harga"}>Harga :</label>
                     <input
                         type="number"
@@ -56,11 +59,12 @@ const IngredientForm = () => {
                         }
                     />
                 </div>
-                <div>
+                <div className="ingredient-form__actions">
                     <button type="submit">Tambah</button>
                 </div>
             </form>
-        </div>
+            </Card>
+        </section>
     )
 }
 
